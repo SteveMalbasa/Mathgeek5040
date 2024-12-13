@@ -1,0 +1,52 @@
+name = "Sydney" #to demonstrate a global variable
+
+class Fastcar:
+
+    awesome = True
+    country = "America"
+
+    def __init__(self, year, make, model, zerotosixtytime, horseypower):
+        self.year = year
+        self.make = make
+        self.model = model
+        self.zerotosixtytime = zerotosixtytime
+        self.horseypower = horseypower
+        self.tacos = []
+
+    def displayInfo(self):
+        print("Muscle Car Guys, I am a", gofast.year, gofast.make, gofast.model, "I got zero to sixty in", gofast.zerotosixtytime, "seconds")
+        print ("and I got", gofast.horseypower, "horseys under the hood. RAWWWWWR!!!")
+        print("RAWWWR types, I am a global variable and my make is", make)   #testing the global variable
+
+    def calculateAge(year):
+        age = 2024 - self.year
+        return age
+
+    def addTacos(self, tacosList):
+        self.tacos.extend(tacosList)   #adds each element of tacoList onto the existing list
+
+    def displayTacos(self):
+        for item in self.tacos:
+            print(item)
+
+    def setHorseypower(self, horseypower):
+        self.horseypower = horseypower
+
+    def getHorseypower(self):
+        return self.horseypower
+    
+    
+Pontiac_GTO = Fastcar(1964, "Pontiac_GTO", "black", "5.1", "348")
+Oldsmobile_FourFourTwo = Fastcar(1970, "Olds_442", "red", "5.9", "360")
+Plymouth_Cuda = Fastcar(1970, "Plymouth_Cuda", "orange", "4.6", "425")
+
+
+#Arya = Person(2003, "Arya", "female", "brown", "pizza")
+#Teague = Person(2000, "Teague", "female", "blonde", "tacos")
+#Joaquin = Person(2005, "Joaquin", "male", "red", "nachos")
+
+Pontiac_GTO.addTacos(["old school", "shrimp", "fish", "haggis"])
+Pontiac_GTO.displayTacos()
+Oldsmobile_FourFourTwo.setHorseypower("10000")
+print("Yugo has a new favorite taco:"), #Yugo.getFood())
+print("GTO is",Pontiac_GTO.calculateAge(), "years old.")
